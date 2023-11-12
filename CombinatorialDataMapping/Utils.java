@@ -111,41 +111,7 @@ public class Utils {
         return output.toString(); // Return the result after building for each combination
     }
     
-   /*
-   public static String buildCustomOutputString(String[] formulas, String[] inputStrings, Object[] combination, ScriptEngine engine, DataStructure structure) {
-        StringBuilder output = new StringBuilder();
-        
-        for (int i = 0; i < formulas.length; i++) {
-            String formula = replaceVariables(formulas[i], inputStrings, combination);
-            
-            try {
-                Object evalResult = engine.eval(formula);
-    
-                // Ensure evalResult is a Double before applying formatting
-                if (evalResult instanceof Double) {
-                    output.append(structure.getOutputStrings()[i]).append(": ").append(String.format("%.2f", (Double) evalResult));
-                } else {
-                    output.append(evalResult);
-                }
-    
-                if (i < formulas.length - 1) {
-                    output.append(", ");
-                } else {
-                    output.append("|");
-                }
-            } catch (ScriptException e) {
-                System.out.println("Exception during evaluation: " + e.getMessage());
-                e.printStackTrace();
-                throw new RuntimeException("Error evaluating the expression.", e);
-            }
-        }
-    
-        return output.toString(); // Return the result after building for each combination
-    }
-*/
-
-
-    
+  
     // parsing output
     public static String[] splitEquation(String equation) {
         // Split the equation using regular expression
