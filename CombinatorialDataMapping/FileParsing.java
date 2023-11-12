@@ -136,19 +136,6 @@ public class FileParsing
         }
         
     }
-    
-    
-
-
-    
-    //prints map to file in 1 line
-    /*public static void printToFile(HashMap<String,String> map, String textName){
-        try (PrintWriter fileOut = new PrintWriter(textName + ".txt")) {
-            fileOut.print(map);
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-    }*/
     public static void printToFile(HashMap<String, String> map, String textName) {
         try (PrintWriter fileOut = new PrintWriter(textName + ".txt")) {
             fileOut.print("{");
