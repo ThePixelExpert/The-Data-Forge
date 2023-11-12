@@ -1,6 +1,7 @@
 # Combinatorial-Data-Mapping
 ### TODO: 
 
+- [ ] Make ability to have multiple files under the same structure
 - [ ] Make a gui for ease of use
   - [ ] make a tab to add fileStructures, and add files/ file data
   - [ ] be able to fiew the files from within the gui
