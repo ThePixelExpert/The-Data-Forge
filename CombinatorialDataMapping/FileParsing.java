@@ -23,19 +23,7 @@ public class FileParsing
     public static void main(String[] args)
     {
         // ax,lat,yaw : leftFront,rightFront,leftBack,rightBack;
-        
-        // add more default things like "random" for varying outputs
-        
-        // make a gui for ease of use
-        // -make a tab to add fileStrucutres, and add files / file data
-        // - be able to view the files from within the gui
-        // - be able to get certain data from a given file
-        // - make a debug console tab if the console does not print anything out anymore
-        
-        // fix sloppy code
-        // - instead of adding "{" and "}" to the beginning and end of the inputs and outputs (found in utils, buildInputString() & buildOutputString())
-        //   add them to a map and then add that map to the main map
-        // think if this is viable because if you need to convert the maps back into a string with a lot of steps, it might not be worth it.
+       
         String[] roboticsInput = {"axial","lateral","yaw"};
         String[] roboticsOutput = {"Left Front Power", "Right Front Power","Left Back Power","Right Back Power"}; 
         String[] roboticsFormula = {"axial +  lateral +  yaw","axial - lateral - yaw",
