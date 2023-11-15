@@ -5,16 +5,16 @@ import javax.script.ScriptException;
 import java.io.FileReader;
 
 public class Utils {
-   public static void generateCombinations(int n, int x, List<Object[]> combinations, String outputMode) {
+   public static void generateCombinations(int n, int x, List<Object[]> combinations, DataStructure.InputType outputMode) {
      
         Object[] result = new Object[n];
         generateCombinationsRecursive(result, 0, x, combinations, outputMode);
         
     }
 
-    public static void generateCombinationsRecursive(Object[] result, int level, int max, List<Object[]> combinations, String outputMode) {
+    public static void generateCombinationsRecursive(Object[] result, int level, int max, List<Object[]> combinations, DataStructure.InputType outputMode) {
         switch(outputMode){
-            case "int":
+            case INT:
                 
                 if (level == result.length) {
                     // Create a copy of the result and add it to the combinations list
@@ -23,11 +23,11 @@ public class Utils {
                 }else {
                     for (int i = 0; i <= max; i++) {
                         result[level] = i;
-                        generateCombinationsRecursive(result, level + 1, max, combinations, "int");
+                        generateCombinationsRecursive(result, level + 1, max, combinations, DataStructure.InputType.INT);
                     }
                 }
                 break;
-            case "double":
+            case DOUBLE:
                  if (level == result.length) {
                     // Create a copy of the result and add it to the combinations list
                     Object[] copy = Arrays.copyOf(result, result.length);
@@ -35,11 +35,11 @@ public class Utils {
                 }else {
                     for (int i = 0; i <= max; i++) {
                         result[level] = ((double) i /10);
-                        generateCombinationsRecursive(result, level + 1, max, combinations, "double");
+                        generateCombinationsRecursive(result, level + 1, max, combinations, DataStructure.InputType.DOUBLE);
                     }
                 }
                 break;
-            case "boolean":
+            case BOOLEAN:
                 
                 if (level == result.length) {
                     // Create a copy of the result and add it to the combinations list
@@ -48,7 +48,7 @@ public class Utils {
                 }else {
                     for (int i = 0; i <= 1; i++) {
                         result[level] = i == 1;
-                        generateCombinationsRecursive(result, level + 1, 1, combinations, "boolean");
+                        generateCombinationsRecursive(result, level + 1, 1, combinations, DataStructure.InputType.BOOLEAN);
                     }
                 }
             default:
@@ -110,8 +110,7 @@ public class Utils {
         }
         return output.toString(); // Return the result after building for each combination
     }
-    
-  
+ 
     // parsing output
     public static String[] splitEquation(String equation) {
         // Split the equation using regular expression
