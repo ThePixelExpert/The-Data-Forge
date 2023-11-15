@@ -1,4 +1,4 @@
-# Combinatorial-Data-Mapping
+# The Data Forge
 ### TODO: 
 
 - [ ] Make a gui for ease of use
