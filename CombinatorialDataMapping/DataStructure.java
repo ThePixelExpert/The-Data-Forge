@@ -5,25 +5,22 @@ import java.io.IOException;
 public class DataStructure {
     private String[] inputStrings;
     private String[] outputStrings;
-    private String inputType;
-    private String outputType;
-    private String structureName;
+    private InputType inputType;
+    private OutputType outputType;
     private String fileName;
     private String[] customOutputFormula;
     
     // the purpose of this class is to create a structure for the file, inputs, and outputs of a map and given output function
     // the main use of this for now would be to make random values and combinations of such and get outputs based on those values.
     // it for right now only has combinational inputs (every combination of a given max value for n amount of index's) but can be used in other ways in the future
-    public DataStructure(String dataStructureName, String fileName, String[] inputs, String[] outputs, String inputType, String outputType){
-        this.structureName = dataStructureName;
+    public DataStructure(String fileName, String[] inputs, String[] outputs, InputType inputType, OutputType outputType){
         this.inputStrings = inputs;
         this.outputStrings = outputs;
         this.inputType = inputType;
         this.outputType = outputType;
         this.fileName = fileName;
     }
-    public DataStructure(String dataStructureName, String fileName, String[] inputs, String[] outputs, String inputType, String outputType, String[] customOutput){
-        this.structureName = dataStructureName;
+    public DataStructure(String fileName, String[] inputs, String[] outputs, InputType inputType, OutputType outputType, String[] customOutput){
         this.inputStrings = inputs;
         this.outputStrings = outputs;
         this.inputType = inputType;
@@ -36,6 +33,12 @@ public class DataStructure {
         // for example "axial + lateral - yaw" would be in pos[0] and in pos[0] for robotics output would be LeftFrontPower
         
         this.customOutputFormula = customOutput;
+    }
+    public enum InputType{
+        INT,DOUBLE,BOOLEAN;
+    }
+    public enum OutputType{
+        INT,DOUBLE,BOOLEAN,RANDOM,CUSTOM;
     }
     
     public void setInputStrings(String[] inputs){
@@ -54,13 +57,10 @@ public class DataStructure {
         return outputStrings;
     }
     
-    public String getStructureName(){
-        return structureName;
-    }
-    public String getInputType(){
+    public InputType getInputType(){
         return inputType;
     }
-    public String getOutputType(){
+    public OutputType getOutputType(){
         return outputType;
     }
     public String getFileName(){
