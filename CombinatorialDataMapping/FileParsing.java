@@ -19,23 +19,11 @@ import java.nio.file.Path;
 
 public class FileParsing
 {
-    static final DecimalFormat df = new DecimalFormat("0.00");
-    public enum OutputType{
-        ROBOTICS, OTHER;
-    }
+ 
     // impliment custom functions for output data
     public static void main(String[] args)
     {
-        // ax,lat,yaw : leftFront,rightFront,leftBack,rightBack;
-        
-        // add more default things like "random" for varying outputs
-        
-        // make a gui for ease of use
-        // -make a tab to add fileStrucutres, and add files / file data
-        // - be able to view the files from within the gui
-        // - be able to get certain data from a given file
-        // - make a debug console tab if the console does not print anything out anymore
-        
+        // example DataStructure's
         String[] roboticsInput = {"axial","lateral","yaw"};
         String[] roboticsOutput = {"Left Front Power", "Right Front Power","Left Back Power","Right Back Power"}; 
         String[] roboticsFormula = {"axial +  lateral +  yaw","axial - lateral - yaw",
@@ -49,9 +37,9 @@ public class FileParsing
         String[] test2Output = {"test4","test5"};
         
 
-        DataStructure robotics = new DataStructure("robotics", roboticsInput, roboticsOutput,"double","custom",roboticsFormula);
-        DataStructure customTest = new DataStructure("custom",customTestInput,customTestOutput,"int","random");
-        DataStructure Test2 = new DataStructure("test2",test2Input,test2Output, "int","random");
+        DataStructure robotics = new DataStructure("robotics", roboticsInput, roboticsOutput,DataStructure.InputType.DOUBLE,DataStructure.OutputType.RANDOM,roboticsFormula);
+        DataStructure customTest = new DataStructure("custom",customTestInput,customTestOutput,DataStructure.InputType.INT,DataStructure.OutputType.RANDOM);
+        DataStructure Test2 = new DataStructure("test2",test2Input,test2Output, DataStructure.InputType.INT,DataStructure.OutputType.RANDOM);
         
 
         persistCombinations(robotics);
@@ -85,7 +73,7 @@ public class FileParsing
             ScriptEngine engine = manager.getEngineByName("js");
             
             switch(structure.getOutputType()){
-                case "custom" :
+                case CUSTOM :
                     
                     for (Object[] combination : combinations) {
                         String input = Utils.buildInputString(structure.getInputStrings(), combination);
@@ -97,7 +85,7 @@ public class FileParsing
                     break;
                    
                  
-                case "random":
+                case RANDOM:
                     
                     for (Object[] combination : combinations) {
                         String input = Utils.buildInputString(structure.getInputStrings(),combination);
