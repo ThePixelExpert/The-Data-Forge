@@ -7,7 +7,9 @@
   - [ ] be able to get certain data from a given file
 
 - [ ] optimize code (make run faster and remove any unnecessary things if it can be done a different easier way)
-
+  - [ ] sort the data files in order from least to greatest value of the {key: value : value}
+        for example it would be (for a max of binary) { {apple: 0, banana: 0} : {blah,blah,blah}. {apple: 0, banana: 1}: {foo}, {apple: 1, banana: 0}:{foo}, {apple:1, banana: 1}:{foo} }
+  - [ ] make binary search instead of linear
 
 
  ### History:
