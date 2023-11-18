@@ -13,14 +13,14 @@
 
 
  ### History:
-                This idea first started when I needed to find all of the combinations for motor values given a certain input set.
-                The equation for getting the motor values was determined by yaw, lateral, and axial inputs of a joystick.
-                I initailly wanted to make a truth table but soon realized that this would be a daunting task and wanted a better way to do it.
-                I then realized that I could simply code something that can do it for me.  This turned into about 3 weeks of figuring out the basics 
-                of what needed to be done, and polishing it.  As time went on, I made the program more generalized until I realized what I wanted it to become.
-                this led to me spending even more time learning things like the file librarys of java and asking ChatGPT for help.  Once I was almost done
-                with the console part, I realized that I needed something extra... I needed a GUI.  This is coming in the future and that final product will be 
-                my AP CSA class's final project.
+    This idea first started when I needed to find all of the combinations for motor values given a certain input set.
+    The equation for getting the motor values was determined by yaw, lateral, and axial inputs of a joystick.
+    I initailly wanted to make a truth table but soon realized that this would be a daunting task and wanted a better way to do it.
+    I then realized that I could simply code something that can do it for me.  This turned into about 3 weeks of figuring out the basics 
+    of what needed to be done, and polishing it.  As time went on, I made the program more generalized until I realized what I wanted it to become.
+    this led to me spending even more time learning things like the file librarys of java and asking ChatGPT for help.  Once I was almost done
+    with the console part, I realized that I needed something extra... I needed a GUI.  This is coming in the future and that final product will be 
+    my AP CSA class's final project.
 ### Description:
     you now have the ability to easily create data structures of any kind.  If you have keys that have a specifc value for them,
     and values that have values for them this is the right program for you.  You can manipulate datastructures of any type.
