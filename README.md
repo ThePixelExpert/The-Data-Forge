@@ -42,6 +42,9 @@
     
     for example, if you wanted to find all of the possible combinations for the apple, bannana, and orange values and their tastFactor 
     you would use this program.
+
+    This program puts the data to a file in a JSON format of:
+      { {hash}:{hash}, {hash}:{hash} }
 ### Instructions:
     create a DataStructure object that contains the name of the file, a String[] for the input keys, a String[] for the output keys,
     the input data Type, output dataType, and if you put "custom" as your outputDataType then you will need a String[] for the formulas.
