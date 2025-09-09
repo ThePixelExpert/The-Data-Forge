@@ -22,6 +22,11 @@
     with the console part, I realized that I needed something extra... I needed a GUI.  This is coming in the future and that final product will be 
     my AP CSA class's final project.
 ### Description:
+
+    This project was oringially designed to make a database of information that could be used to debug theoretical values that a set of sensors would have in the real world.
+    The intended use for this was to calculate every possible combination of inputs from an analog joystick and map an output to 4 motors and what their expected encoder values would be,
+    so in real time you could compare the values and project what they should be.  This project turned into a learning experience for using complicated resursive patterns, data structures, and file parsing.
+    
     you now have the ability to easily create data structures of any kind.  If you have keys that have a specifc value for them,
     and values that have values for them this is the right program for you.  You can manipulate datastructures of any type.
     It works best if you have a {key:value = key2:value2}.  
